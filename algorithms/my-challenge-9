@@ -1,0 +1,36 @@
+ function distinctElem(arr){                             // Write a function to get the distinct elements in an array
+    let newArr = []
+
+    for (let i=0; i< arr.length; i++){
+        let char = arr[i];
+        if(!newArr.includes(char)){
+            newArr.push(char);
+        }
+    }
+    return newArr;
+}
+
+
+function distinctElem(arr){
+    return new Set(arr);
+   //return new Set(arr)
+}
+
+
+function distinctElem(arr){
+    let obj = {};
+
+    for (let i=0; i<arr.length; i++){
+        let char = arr[i];
+        if(obj[char]){
+            return obj[char]++
+        }else{
+            obj[char] = 1;
+        }
+    }
+    return Object.keys(obj)
+}
+
+
+console.log(distinctElem([1,1,2,3,4,4,4,5,5,6]))
+console.log(distinctElem([1, 2, 3, 3, 4, 4, 5]))

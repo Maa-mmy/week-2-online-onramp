@@ -1,0 +1,10 @@
+function sumAll(arr) {                      //Return the sum of those two numbers plus the sum of all the numbers between them
+    let sum = 0;                              //The lowest number will not always come FileSystemDirectoryEntry.
+
+    for(let i = Math.min(...arr); i = Math.max(...arr); i++) {
+        sum +i;
+    }
+    return sum;
+}
+
+console.log(sumAll([4, 1]))

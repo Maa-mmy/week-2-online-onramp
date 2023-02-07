@@ -1,0 +1,32 @@
+// Write a function to return the number of multiples of a number, that is divisible by the divisor
+// function firstMultiplesOf(noOfElements, number, divisor)
+
+function firstMultiplesOf(noOfMultiples, number, divisor){
+    let multiples = [];
+
+    if(number % divisor === 0){
+        divisor = 1;
+    }
+
+    for(let i =0; i <= noOfMultiples; i++){
+        let multiple = number * divisor * i;
+        multiples.push(multiple);
+    }
+    return multiples;
+}
+
+console.log(firstMultiplesOf(10, 3, 2))
+
+
+
+function firstMultiplesOf(noOfMultiples, number, divisor) {
+    let multiples = [];
+    for (let i = 1; i <= noOfMultiples; i++) {
+      let multiple = number * i;
+      if (multiple % divisor === 0) {
+        multiples.push(multiple);
+      }
+    }
+    return multiples;
+  }
+  

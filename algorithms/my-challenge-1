@@ -1,0 +1,41 @@
+function isogram(str){                                 //An isogram is a word that has no repeating letters, consecutive or non-consecutive. 
+let obj = {}                                      //Implement a function that determines whether a string that contains only letters is an isogram.  
+                                                 //Assume the empty string is an isogram. Ignore letter case.
+let lowerCase = str.toLowerCase()
+
+for(let i = 0; i <= lowerCase.length; i++){
+    //if the current value is already in the object it means a repeated letter, i return false
+    if(obj[lowerCase[i]]){
+        return false
+    }else{
+        //if the current value is not in the object , assign it a value of 1
+        obj[lowerCase[i]] = 1
+    }
+}
+return true
+}
+
+
+function isogram(str) {
+    let words = str.toLowerCase()
+
+    let result = {}
+
+    for (let i = 0; i < words.length; i++) {
+        if(result[words[i]]) {
+            return false
+        } else {
+            result[words[i]] = 1
+        }
+    }
+    return true;
+}
+
+console.log(isogram("aba"))
+console.log(isogram("moOse"))
+console.log(isogram("Dermatoglyphics"))
+
+//Example: (Input --> Output)
+//"Dermatoglyphics" --> true
+//"aba" --> false
+//"moOse" --> false (ignore letter case)

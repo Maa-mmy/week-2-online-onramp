@@ -1,0 +1,79 @@
+/*function toRoman(num) {
+
+  const lookup = {
+    1000: 'M',
+    900: 'CM',
+    500: 'D',
+    400: 'CD',
+    100: 'C',
+    90: 'XC',
+    50: 'L',
+    40: 'XL',
+    10: 'X',
+    9: 'IX',
+    5: 'V',
+    4: 'IV',
+    1: 'I'
+  };
+
+let  roman = ''
+  for (let i in lookup) {
+  while (num >= lookup[i]) {
+      roman += i;
+      num -= lookup[i];
+   }
+  }
+return roman
+}
+*/
+
+console.log(toRoman(53))
+
+function toRoman(num) {
+  const decimalValue = [ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ];
+  const romanNumeral = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ];
+
+  let romanized = '';
+
+  for (let i = 0; i < decimalValue.length; i++) {
+    while (num >= decimalValue[i]) {
+      romanized += romanNumeral[i];
+      num -= decimalValue[i];
+    }
+  }
+
+  return romanized;
+}
+
+
+
+/*function romanToDecimal(romanNumeral) {
+  let decimal = 0;
+  let lastNumber = 0;
+  let romanNumeralMap = new Map([
+      ['I', 1],
+      ['V', 5],
+      ['X', 10],
+      ['L', 50],
+      ['C', 100],
+      ['D', 500],
+      ['M', 1000]
+  ]);
+
+  for (let i = romanNumeral.length - 1; i >= 0; i--) {
+      let numeral = romanNumeral[i];
+      let decimalValue = romanNumeralMap.get(numeral);
+      if (decimalValue < lastNumber) {
+          decimal -= decimalValue;
+      } else {
+          decimal += decimalValue;
+      }
+      lastNumber = decimalValue;
+  }
+
+  return decimal;
+}
+
+let romanNumeral = "XIV";
+console.log(romanToDecimal(romanNumeral));
+*/

@@ -1,0 +1,32 @@
+function rot13(encodedStr) {
+  let decoded = "";
+  
+  for (let i = 0; i < encodedStr.length; i++) {
+    let code = encodedStr.charCodeAt(i);
+    if (code >= 65 && code <= 90) {
+      code = (code - 65 + 13) % 26 + 65;
+    } 
+    decoded += String.fromCharCode(code);
+  }
+  return decoded;
+}
+
+
+console.log(rot13("SERR PBQR PNZC"))
+
+
+function rot13(encodedStr) {
+    let decoded = "";
+    
+    for (let i = 0; i < encodedStr.length; i++) {
+      let code = encodedStr.charCodeAt(i);
+      if (code >= 97 && code <= 122) {
+        code = (code - 97 + 3) % 26 + 97;
+      } 
+      decoded += String.fromCharCode(code);
+    }
+    return decoded;
+  }
+  
+  
+  console.log(rot13("alphabelts"))
