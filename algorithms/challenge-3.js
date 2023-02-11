@@ -8,6 +8,7 @@ function increment(arr, value) {                 //Implement the function increm
 }
 
 
+
 function increment(arr, value) {
     for (let i = 0; i < arr.length; i++) {
       arr[i].val += value;
@@ -15,6 +16,16 @@ function increment(arr, value) {
     return arr;
   }
   
+
+
+function increment(arr, value){
+  const mapped = arr.map((item) => {
+      return {
+          ["val"]: item.val += value
+      };
+  });
+  return mapped;
+}
 
   console.log(increment([{ val: 1 }, { val: 2}, { val: 3 }], 2))
   console.log(increment([{ val: 10 }, { val: 20}, { val: 30 }], 5))

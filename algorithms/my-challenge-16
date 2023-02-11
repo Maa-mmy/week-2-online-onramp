@@ -1,0 +1,21 @@
+/*function total(arr) {
+    let result = 0;
+    for (let i = 0; i < arr.length; i++) {
+     result += arr[i].age
+}
+return result
+}
+*/
+
+function total(arr){
+    let result = 0;
+    for (i of arr){
+      result += i.age
+      console.log(i)
+    }
+    return result
+  }
+
+console.log(total([{name: "XYZ", age: 23}, {name: "ABC", age: 40}]))
+console.log(total([{name: "XYZ", age: 34}, {name: "XYZ", age: 29}, {name: "XYZ", age: 33}]))
+console.log(total([{name: "XYZ", age: 66}, {name: "WER", age: 44}, {name: "AZX", age: 22}]))

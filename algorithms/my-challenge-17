@@ -1,0 +1,15 @@
+function range(str) {
+    let count = 0;
+
+    for(let i = 0; i < str.length; i++) {
+        if(str[i].length > 3 && str[i].length <= 7) {
+           count++;
+        }
+    }
+    return count;
+}
+
+
+console.log(range(["Java", "Kotlin", "Javascript", "php", "spring", "closure"]));
+console.log(range(["os", "jenkins", "circleci", "travis", "git", "closure"]))
+console.log(range(["servlets", "springboot"]))

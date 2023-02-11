@@ -1,0 +1,7 @@
+function miniMaxSum (arr) {                     // Given five positive integers, find the minimum and  
+    arr.sort((a,b) => a - b);                     //maximum values that can be calculated by summing exactly four of the five integers.
+    let total = arr.reduce((a,b) => a + b );        //Then print the respective minimum and maximum values 
+    return [total - arr[arr.length - 1], total - arr[0]]                  //as a single line of two space-separated long integers.
+}
+
+console.log(miniMaxSum([3,1,2,5,4])) // to return[10, 14]

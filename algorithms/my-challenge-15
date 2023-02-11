@@ -1,0 +1,13 @@
+function sumNumbers(str){
+    let sum = 0;
+    let arr = str.split(',')
+  
+    for (let i = 0; i < arr.length; i++){
+      if(!isNaN(arr[i])){
+        sum += Number(arr[i])
+      }
+    }
+  return sum
+  }
+
+  console.log(sumNumbers("2,g,65,e,3,7,5,g,3")); 

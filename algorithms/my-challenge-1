@@ -15,22 +15,6 @@ for(let i = 0; i <= lowerCase.length; i++){
 return true
 }
 
-
-function isogram(str) {
-    let words = str.toLowerCase()
-
-    let result = {}
-
-    for (let i = 0; i < words.length; i++) {
-        if(result[words[i]]) {
-            return false
-        } else {
-            result[words[i]] = 1
-        }
-    }
-    return true;
-}
-
 console.log(isogram("aba"))
 console.log(isogram("moOse"))
 console.log(isogram("Dermatoglyphics"))

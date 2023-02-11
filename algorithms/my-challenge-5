@@ -9,4 +9,4 @@ function validAnagram(str1, str2) {
 
     console.log(validAnagram('texttwisttime', 'timetwisttext'))
     console.log(validAnagram('mined', 'dime'))
-    console.log(validAnagram('remote', 'meteor'))
+    console.log(validAnagram('reMOte', 'meteor'))

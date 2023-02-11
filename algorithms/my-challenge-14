@@ -1,0 +1,12 @@
+function totalPositiveSum(arr1, arr2) {
+    let sum = 0;
+    for(let i = 0; i < arr1.length; i++) {
+        let sub = arr1[i] - arr2[i]
+        if( sub > 0) {
+            sum += sub
+            }
+    }
+    return sum
+}
+
+console.log(totalPositiveSum([2,5,1,0,5,7], [2,3,5,6,2,1]))

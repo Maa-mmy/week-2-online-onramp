@@ -1,0 +1,15 @@
+function uniqueValues(arr) {
+    arr.sort()
+    return new Set(arr)
+}
+
+console.log(uniqueValues([2,4,5,4,3,2,5,6,6,7,7,9,1,2,3,5]))
+
+
+
+function uniqueValues(arr) {
+    let set = new Set(arr)
+    let array = new Array(...set)
+  
+    return array.sort();  
+  }

@@ -1,0 +1,36 @@
+function repeatConsonants(word, multiplier){
+    const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];     // write a function that repeats every consonant 
+    //let words = word.split("");                                            // in a string by a given factor
+    const result = "";
+
+    for (i= 0; i < word.length; i++){
+        let letter = word[i];
+
+        if(letter.includes(vowels)){
+            result += letter;
+        }else{
+            result += letter;
+        }
+    }
+    return result;
+}
+
+
+/*function repeatConsonants(str, factor) {
+    var result = "";
+    for (var i = 0; i < str.length; i++) {
+      var c = str[i];
+      if (c.match(/[aeiouAEIOU]/)) {
+        result += c;
+      } else {
+        for (var j = 0; j < factor; j++) {
+          result += c;
+        }
+      }
+    }
+    return result;
+  }
+  */
+
+   console.log(repeatConsonants("hello", 3))
+   console.log(repeatConsonants("Cynthia", 2))

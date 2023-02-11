@@ -1,0 +1,12 @@
+const letters = "abcdefghijklmnopqrstuvwxyz";              // You are given a word, your task is to score the word. 
+                                                           //The score of a word, is the sum of the scores of its letters.
+function scoreWord (word){                                 // The score of a letter is the position of the letter in the alphabet.
+    let score = 0;                                         // For example, the score of the word "hello" is 8 + 5 + 12 + !2 + 15 =52;
+    for (let i = 0; i < word.length; i++){
+        score += letters.indexOf(word[i]) + 1;
+    }
+    return score;
+}
+
+console.log(scoreWord('hello'))
+console.log(scoreWord('Cynthia'))
