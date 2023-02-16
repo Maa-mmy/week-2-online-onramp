@@ -1,0 +1,12 @@
+function hideAfter(str, after) {                                  //Given a string and a 0-indexed number, write a function 
+  return str.substr(0, after + 1) + '*'.repeat(str.length - after - 1);          // that hides every character in the string after the 
+}                                                                                   //specified number with the asterisk character.
+                                                                   //For example, hideAfter('Cynthia', 3) will return the value Cynt***
+
+function hideAfter(str, after) {
+    return str.slice(0,after+1).padEnd(str.length, "*")    
+}
+
+
+console.log(hideAfter('decadevs', 3))
+console.log(hideAfter('cynthia', 3))

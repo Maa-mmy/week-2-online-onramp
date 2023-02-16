@@ -1,0 +1,32 @@
+function sumLetters(letters) {
+    let vowels = new Set(["a","e","i","o","u"]);
+    let sum = 0;
+
+    for(let letter of letters) {
+        if(vowels.has(letter)) {
+            sum += 1;
+        } else {
+            sum += 6;
+        }
+    }
+    return sum;
+}
+
+
+
+/*function sumLetters(word) {
+    let vowels = "aeiouAEIOU";
+    let sum = 0;
+
+    for(let i = 0; i < word.length; i++) {
+        if(vowels.includes(word[i])) {
+            sum += 1;
+        } else {
+            sum += 6;
+        }
+    }
+    return sum;
+}
+*/
+
+console.log(sumLetters(["h","e","l","l","o"]))

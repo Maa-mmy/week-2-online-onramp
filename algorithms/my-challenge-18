@@ -16,7 +16,7 @@ function repeatConsonants(word, multiplier){
 }
 
 
-/*function repeatConsonants(str, factor) {
+function repeatConsonants(str, factor) {
     var result = "";
     for (var i = 0; i < str.length; i++) {
       var c = str[i];
@@ -30,7 +30,7 @@ function repeatConsonants(word, multiplier){
     }
     return result;
   }
-  */
+  
 
    console.log(repeatConsonants("hello", 3))
    console.log(repeatConsonants("Cynthia", 2))
